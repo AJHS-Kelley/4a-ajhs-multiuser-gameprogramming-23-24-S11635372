@@ -59,6 +59,23 @@ namespace numberGuess
             } else {
                 Console.WriteLine("You inputed an invaled difficulty");
             }
+            Console.WriteLine("minimum: " + rangeMin);
+            Console.WriteLine("maximum: " + rangeMax);
+            Console.WriteLine("num. Guesses: " + numberGuess);
+
+            //start the m atch
+            while(playerScore != 3 && cpuScore != 3){
+                //any code you wnat to run before each round goes here
+
+
+                //start each round
+                for (int i =0; i < numGuesses ; i++) {
+                    // code to guess number goes here
+                    Console.WriteLine("What number do you want to guess");
+                    console.ReadLine();
+                    if (numberGuess)
+                }
+            }
         }
     }
 }
