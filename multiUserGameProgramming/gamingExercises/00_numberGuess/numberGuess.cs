@@ -38,6 +38,7 @@ namespace numberGuess
             string difficulty = "";
             int rangeMin = -1;
             int rangeMax = -1;
+            int playerGuess = 0;
 
             Console.WriteLine("Welcome to the number Guess Game!\n Pleas select a difficulty\nEasy: range 0 - 10 with 4 guesses\n Normal: 0-25 for 3 guesses\nHard: 0-1000000000000 with 1 guesses");
             // difficulty select
@@ -66,15 +67,40 @@ namespace numberGuess
             //start the m atch
             while(playerScore != 3 && cpuScore != 3){
                 //any code you wnat to run before each round goes here
-
-
+                //generate secret number
+                Random rndNum = new Random();
+                secretNumber = rndNum.Next(rangeMin, rangeMax);
+                console.WriteLine("player Score:" + playerScore + "\n")
+                console.WriteLine("CPU Score: " + cpuScore + "\n")
                 //start each round
                 for (int i =0; i < numGuesses ; i++) {
                     // code to guess number goes here
-                    Console.WriteLine("What number do you want to guess");
-                    console.ReadLine();
-                    if (numberGuess)
+                    Console.WriteLine("You have used " + numAttempts + "this round\n")
+                    console.WriteLine("YOu must guess between " + rangeMin + "and " + rangeMax)
+                    playerGuess = System.Convert.ToInt32(Console.ReadLine(););
+                    if (playerGuess == secretNumber) {
+                        //print success message
+                        playerScore++;
+                        break;
+                    } else {
+                        if (playerGuess > secretNumber){
+                            Console.WriteLine("your guess is too high.\n")
+                        } else {
+                            Console.WriteLine("Your guess is too low.\n")
+                        }
+                    }
+                    numAttempts++;
                 }
+                if(playerGuess != secretNumber){
+                    cpuScore++;
+                    //print a rounfd loss message to console
+                    Console.WriteLine("You loss that round")
+                }
+            }
+            if (playerScore >+ 3){
+                Console.WriteLine("You have won the game.\n")
+            } else {
+                Console.WriteLine("You have lost the games")
             }
         }
     }
