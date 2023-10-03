@@ -1,4 +1,5 @@
-﻿using System;
+﻿//02 Collections, Kenneth Whitfield, v0.0
+using System;
 
 namespace _02_Collections
 {
@@ -6,7 +7,7 @@ namespace _02_Collections
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
