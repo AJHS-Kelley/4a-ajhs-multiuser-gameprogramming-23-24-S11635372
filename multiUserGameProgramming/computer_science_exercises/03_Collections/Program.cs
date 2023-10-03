@@ -1,4 +1,4 @@
-﻿//02 Collections, Kenneth Whitfield, v0.1a
+﻿//02 Collections, Kenneth Whitfield, v0.1b
 using System;
 
 namespace _02_Collections
@@ -19,9 +19,20 @@ namespace _02_Collections
             */
 
             //Declaring and definig an array
-            sting[] breakfastFoods = {"Bacon", "Waffles", "Pancakes", "Cereal", "Parfait"};
+            string[] breakfastFoods = {"Bacon", "Waffles", "Pancakes", "Cereal", "Parfait"};
             int[] testScores = {95, 100, 25, 15, 27, 35};
-            float[] GPA = {3.14f,2.25f, 1.74f, 1.99f, 0.99f, 4.25 }
+            float[] GPA = {3.14f,2.25f, 1.74f, 1.99f, 0.99f, 4.25f };
+
+            // print array contenrs -- all elements on a single line
+            Console.WriteLine("the elements for each array are:\n");
+            Console.WriteLine("breakfastFoods: \n" + String.Join(", ", breakfastFoods));
+            Console.WriteLine();
+
+            Console.WriteLine("testScores: \n" + String.Join(", ", testScores));
+            Console.WriteLine();
+
+            Console.WriteLine("GPA: \n" + String.Join(", ", GPA));
+            Console.WriteLine();
         }
     }
 }
