@@ -36,11 +36,16 @@ namespace MethodsParameters
                 Console.WriteLine("I scream but I do not hear");
             }
         }
+        static void MakeEggs(int num, string style)
+        {
+            Console.WriteLine("You have ordered" + num + "eggs cooked" +style);
+        }
         static void Main(string[] args)
         {
             //MyMethod();
             //DoubleUp();
-            MakePancakes();
+           //MakePancakes();
+           MakeEggs(2, "Omlet");
         }
     }
 }
