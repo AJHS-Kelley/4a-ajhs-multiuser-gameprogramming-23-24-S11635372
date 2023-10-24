@@ -13,10 +13,34 @@ namespace MethodsParameters
             Console.WriteLine("Fortnite Battlepass");
             
         }
+        //static the method belongs to the current class, it is not an object   
+        //void this method has no return value
 
+        static int DoubleUp()
+        {
+            int sum = 0;
+            Console.WriteLine("This method will double the number and return it");
+            Console.WriteLine("Please enter a number on the next line");
+            sum = System.Convert.ToInt32(Console.ReadLine());
+            //sum*= 2;
+            //Console.WriteLine(sum);
+            return sum *= 2;   
+        }
+
+        //Methods with parameters
+        static void MakePancakes(int num)
+        {
+            for(int i = 0; i< num; i++) 
+            {
+                //code to run
+                Console.WriteLine("I scream but I do not hear");
+            }
+        }
         static void Main(string[] args)
         {
-            MyMethod();
+            //MyMethod();
+            //DoubleUp();
+            MakePancakes();
         }
     }
 }
