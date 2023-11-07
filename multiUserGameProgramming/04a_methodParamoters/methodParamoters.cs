@@ -1,4 +1,5 @@
 //Kenneth Whitfield, Template, v0.
+// All required examples given. 
 using System;
 
 namespace MethodsParameters
