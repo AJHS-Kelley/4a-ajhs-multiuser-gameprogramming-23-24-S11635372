@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ewf5PWLYNJA/UKtAdeMVgaqJDwMxi1Vck5sfxDyjlIIdB4VUphZGTKyZdotpiaMeCivvmIFBpYdWefGdmOgvNQ==",
+  "dgSpecHash": "0BFy4fRaBz/TD2E7aM/E2C7z+x8aS+vwCEksUAi2bIIvV6vfx7bSoW4vYMeL+TvZXXQFhXUBilQyrDCPPR4Isw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\s11635372\\Downloads\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\computer_science_exercises\\02_Collections\\02_Collections.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\kenrw\\OneDrive\\Documents\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kenrw\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\kenrw\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\kenrw\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\kenrw\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
