@@ -1,27 +1,27 @@
 //Kenneth Whitfield, Template, v0.
 using System;
 
-namespace Template
+namespace BlackJack
 {
     class Template
     
     {
-        static bool MergeFruit()
+        static int Inventory()//What is your inventory
         {
-            
-            
+            string[] inventory = {"Mini potion", "Normal potion", "Military Grade potion", "Sword",}
+            return inventory
         }
-        static int DropFruit()
+        static int Healing()//Decides how much you can heal at onece
         {
-            
+            pass
         }
-        static int Points()
+        static int Combat()//Decide damage
         {
-            
+            pass
         }
-        static void Death()
+        static void Ending()//Decide who wins
         {
-            
+            pass
         }
         static void Main(string[] args)
         {
