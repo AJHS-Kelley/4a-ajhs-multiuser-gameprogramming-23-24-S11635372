@@ -38,14 +38,15 @@ namespace BasicCombatSim
         }
         static int Healing()//Decides how much you can heal at onece
         {
-            int healAmount = Console.ReadLine("You have a " + Inventory() + " In your inventory which would you like to use. To go back to combat type back");
+            Console.WriteLine("You have a " + Inventory() + " In your inventory which would you like to use. To go back to combat type back");
+            int healAmount = Console.ReadLine();  
            
-            if(healAmount = "military grade potion"){
-                health + 10;
+            if (healAmount = "military grade potion") {
+                health += 10;
             } else if(healAmount == "normal potion"){
-                health + 5;
+                health += 5;
             } else if(healAmount == "mini potion" ){
-                health + 2;
+                health += 2;
             } else if(healAmount == "back"){
                 work();
             } else{
