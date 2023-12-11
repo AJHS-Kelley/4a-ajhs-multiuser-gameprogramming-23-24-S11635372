@@ -4,19 +4,32 @@ using System.Collections;
 
 namespace BasicCombatSim
 {
+    static class Globals
+    {
+        public static int health = 50;
+        public static int gokuHealth = 100;
+        public static ArrayList inventory = new ArrayList()
+        {
+            "mini potion", "normal potion", "military grade potion"
+        };
+    }
     
     class Template
     
     {
-        static string[] Inventory()//What is your inventory
+        static string Inventory()//What is your inventory
         {
-            string[] inventory = {"mini potion", "normal potion", "military grade potion"};
-            return inventory;
+            string inv = "";
+            foreach (string item in Globals.inventory)
+            {
+                inv = inv + ", " + System.Convert.ToString(item);
+            }
+            
+            return inv;
         }
+        
         static int[] Combat()//Decide damage
         {
-            int gokuHealth = 100;
-            int health = 50;
 
             Random playerRoll = new Random();
             int playerRolls = playerRoll.Next(1, 7);
@@ -25,54 +38,63 @@ namespace BasicCombatSim
             int gokuRolls = gokuRoll.Next(1, 7);
 
             if (playerRolls > gokuRolls){
-                gokuHealth -= playerRolls;
+                Globals.gokuHealth -= playerRolls;
             } else if (playerRolls <= gokuRolls){
-                health -= gokuRolls;
+                Globals.health -= gokuRolls;
             } else{
                 Console.WriteLine("ERROR");
             }
             
-            int[] healthList = {health, gokuHealth};
+            int[] healthList = {Globals.health, Globals.gokuHealth};
             
             return healthList;
         }
         static int Healing()//Decides how much you can heal at onece
         {
-            Console.WriteLine("You have a " + Inventory() + " In your inventory which would you like to use. To go back to combat type back");
-            int healAmount = Console.ReadLine();  
+            Console.WriteLine("You have a " + Inventory() + ". In your inventory which would you like to use. To go back to combat type back");
+            string healAmount = Console.ReadLine();  
            
-            if (healAmount = "military grade potion") {
-                health += 10;
+            if (healAmount == "military grade potion") {
+                Globals.health += 10;
+                Globals.inventory.Remove("military grade potion");
             } else if(healAmount == "normal potion"){
-                health += 5;
+                Globals.health += 5;
+                Globals.inventory.Remove("normal potion");
             } else if(healAmount == "mini potion" ){
-                health += 2;
+                Globals.health += 2;
+                Globals.inventory.Remove("mini potion");
             } else if(healAmount == "back"){
                 work();
             } else{
                 Console.WriteLine("ERROR");
             }
                 
-            return health;
+            return Globals.health;
         }
-        static void work(int gokuHealth,int health)//Decide who wins
+        static void work()//Decide who wins
         {
 
-            Console.WriteLine("You are fighting Goku he has " + gokuHealth + " left, what do you want to do fight or heal\n");
+            
             // string playerAction = Console.ReadLine("type every thing in lowercase, type heal to go to healing menu, type fight to fight\n");
-            while (health > 0 | gokuHealth >0)
+            while (Globals.health > 0 && Globals.gokuHealth >0)
             {
-                string playerAction = Console.ReadLine("type every thing in lowercase, type heal to go to healing menu, type fight to fight\n");
+                Console.WriteLine("You are fighting Goku, he has " + Globals.gokuHealth + " health left. You have " + Globals.health + " health left. What do you want to do, fight or heal?\n");
+                Console.WriteLine("type every thing in lowercase, type heal to go to healing menu, type fight to fight\n");
+                string playerAction = Console.ReadLine();
                 
-                if(playerAction == "fight"){
+                
+                
+                if(playerAction == "f"){
                     Combat();
-                } else if(playerAction =="heal"){
+                } else if(playerAction =="h"){
                     Healing();
                 } else{
                     Console.WriteLine("Error");
                 }
                 
-            }    
+            }
+            Console.WriteLine("THE END");
+            
         }
         static void Main(string[] args)
         {
