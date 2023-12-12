@@ -6,7 +6,7 @@ namespace BasicCombatSim
 {
     static class Globals
     {
-        public static int health = 50;
+        public static int health = 65;
         public static int gokuHealth = 100;
         public static ArrayList inventory = new ArrayList()
         {
@@ -38,8 +38,10 @@ namespace BasicCombatSim
             int gokuRolls = gokuRoll.Next(1, 7);
 
             if (playerRolls > gokuRolls){
+                Console.WriteLine("You rolled a " + playerRolls + ", Goku rolled a " + gokuRolls + ". You win this round.");
                 Globals.gokuHealth -= playerRolls;
             } else if (playerRolls <= gokuRolls){
+                Console.WriteLine("You rolled a " + playerRolls + ", Goku rolled a " + gokuRolls + ". You lost this round.");
                 Globals.health -= gokuRolls;
             } else{
                 Console.WriteLine("ERROR");
@@ -55,13 +57,13 @@ namespace BasicCombatSim
             string healAmount = Console.ReadLine();  
            
             if (healAmount == "military grade potion") {
-                Globals.health += 10;
+                Globals.health += 15;
                 Globals.inventory.Remove("military grade potion");
             } else if(healAmount == "normal potion"){
-                Globals.health += 5;
+                Globals.health += 7;
                 Globals.inventory.Remove("normal potion");
             } else if(healAmount == "mini potion" ){
-                Globals.health += 2;
+                Globals.health += 5;
                 Globals.inventory.Remove("mini potion");
             } else if(healAmount == "back"){
                 work();
@@ -82,23 +84,29 @@ namespace BasicCombatSim
                 Console.WriteLine("type every thing in lowercase, type heal to go to healing menu, type fight to fight\n");
                 string playerAction = Console.ReadLine();
                 
-                
-                
-                if(playerAction == "f"){
+                if(playerAction == "fight"){
                     Combat();
-                } else if(playerAction =="h"){
+                } else if(playerAction =="heal"){
                     Healing();
                 } else{
                     Console.WriteLine("Error");
                 }
                 
             }
-            Console.WriteLine("THE END");
+            
+            if (Globals.health <= 0){
+                Console.WriteLine("You have died get better");
+            } else if(Globals.gokuHealth <= 0){
+                Console.WriteLine("You won good job");
+            } else{
+                Console.WriteLine("Game broke go home");
+            }
             
         }
         static void Main(string[] args)
         {
             work();
+            //:D
         }
     }
 }
