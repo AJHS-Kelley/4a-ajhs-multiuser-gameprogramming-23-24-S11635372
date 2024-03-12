@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kenrw\\OneDrive\\Documents\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj": {}
+    "C:\\Users\\kenrw\\Downloads\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kenrw\\OneDrive\\Documents\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj": {
+    "C:\\Users\\kenrw\\Downloads\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenrw\\OneDrive\\Documents\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj",
+        "projectUniqueName": "C:\\Users\\kenrw\\Downloads\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj",
         "projectName": "02_Collections",
-        "projectPath": "C:\\Users\\kenrw\\OneDrive\\Documents\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj",
+        "projectPath": "C:\\Users\\kenrw\\Downloads\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\02_Collections.csproj",
         "packagesPath": "C:\\Users\\kenrw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenrw\\OneDrive\\Documents\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\obj\\",
+        "outputPath": "C:\\Users\\kenrw\\Downloads\\4a-ajhs-multiuser-gameprogramming-23-24-S11635372\\multiUserGameProgramming\\03a_Collections\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kenrw\\AppData\\Roaming\\NuGet\\NuGet.Config"
